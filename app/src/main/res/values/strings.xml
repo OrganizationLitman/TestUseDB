@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TestUseDB</string>
+    <string name="name">Name</string>
+    <string name="position">Position</string>
+    <string name="height">Height</string>
+    <string name="save">Guardar</string>
+    <string name="show">Mostrar</string>
+</resources>
