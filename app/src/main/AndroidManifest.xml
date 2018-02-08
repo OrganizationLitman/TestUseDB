@@ -3,7 +3,9 @@
     package="com.itcgroup.vector.testusedb">
 
 
+    <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
 
     <application
         android:allowBackup="true"
@@ -21,6 +23,7 @@
         </activity>
         <activity android:name=".activities.RegisterPlayerActivity" />
         <activity android:name=".activities.ShowPlayersActivity"></activity>
+        <service android:name=".connection.ServiceUpdateData"></service>
     </application>
 
 </manifest>
