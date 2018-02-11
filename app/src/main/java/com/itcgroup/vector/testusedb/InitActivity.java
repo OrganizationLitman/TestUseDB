@@ -19,8 +19,8 @@ import java.util.List;
 
 public class InitActivity extends AppCompatActivity {
 
-
-    Button btnSave, btnShow;
+    private SQLiteDataBaseHandler db;
+    Button btnSave, btnShow, btnDelete;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +30,7 @@ public class InitActivity extends AppCompatActivity {
 
         btnSave = (Button) findViewById(R.id.btnGuardar);
         btnShow = (Button) findViewById(R.id.btnMostrar);
+        btnDelete = (Button) findViewById(R.id.btnDelete);
 
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,6 +52,17 @@ public class InitActivity extends AppCompatActivity {
 
             }
         });
+
+        btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                db = new SQLiteDataBaseHandler(getApplicationContext());
+                db.deleteAll();
+                Log.d("Borrado de Dat", "Ok");
+            }
+        });
+
+
 
     }
 

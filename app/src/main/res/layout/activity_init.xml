@@ -23,6 +23,12 @@
             android:id="@+id/btnMostrar"
             android:text="@string/show"/>
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnDelete"
+            android:text="@string/delete"/>
+
     </LinearLayout>
 
 </LinearLayout>

@@ -56,6 +56,14 @@ public class SQLiteDataBaseHandler extends SQLiteOpenHelper {
         db.close();
     }
 
+    public void deleteAll(){
+        //Obtiene la referencia para DB escribible
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(TABLE_NAME, "1",null);
+        db.close();
+
+    }
+
     public Player getPlayer(int id){
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.query(TABLE_NAME, //a. tabla
