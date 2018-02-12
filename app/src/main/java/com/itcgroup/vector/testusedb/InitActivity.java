@@ -71,7 +71,7 @@ public class InitActivity extends AppCompatActivity {
         super.onPause();
 
         Log.d("Entro ","onPause");
-        getApplicationContext().startService(new Intent(getApplicationContext(), ServiceUpdateData.class));
+        //getApplicationContext().startService(new Intent(getApplicationContext(), ServiceUpdateData.class));
 
     }
 
@@ -80,6 +80,6 @@ public class InitActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         Log.d("Entro", "onResume");
-        getApplicationContext().startService(new Intent(getApplicationContext(), ServiceUpdateData.class));
+        //getApplicationContext().startService(new Intent(getApplicationContext(), ServiceUpdateData.class));
     }
 }

@@ -70,6 +70,7 @@ public class ServiceUpdateData extends Service {
                         List<Player> list = response.body();
 
                         Log.d("Registro de Lista", "/"+list.size());
+                        Log.d("Response", "/"+response.isSuccessful());
 
                     }
 

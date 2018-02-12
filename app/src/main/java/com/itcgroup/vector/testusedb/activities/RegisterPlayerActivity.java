@@ -50,7 +50,7 @@ public class RegisterPlayerActivity extends AppCompatActivity {
                 player.setPosition(position.getText().toString());
                 player.setHeight(Integer.parseInt(height.getText().toString()));
                 
-                if(!Util.isNetworkAvailable(getApplicationContext())){
+                if(Util.isNetworkAvailable(getApplicationContext())){
                     Log.d("Retrofit", "Guardar en Servicio");
                     retrofitInterface = RetrofitClient.getClient().create(RetrofitInterface.class);
                     Call<Player> call = retrofitInterface.savePlayer(player);
