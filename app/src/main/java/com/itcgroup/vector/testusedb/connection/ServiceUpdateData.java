@@ -58,6 +58,7 @@ public class ServiceUpdateData extends Service {
             Log.d("Lista", ":"+listPlayer.size());
             if(listPlayer != null && listPlayer.size() > 0){
                 //TODO Consumir servicio para actualizar la data de la base de datos
+                //TODO Se actualiza la data almecenada en Base de datos local
                 Log.d("Actualizando", "Se actualizo los datos");
 
                 retrofitInterface = RetrofitClient.getClient().create(RetrofitInterface.class);
@@ -72,16 +73,26 @@ public class ServiceUpdateData extends Service {
                         Log.d("Registro de Lista", "/"+list.size());
                         Log.d("Response", "/"+response.isSuccessful());
 
+                        if(response.isSuccessful()){
+                            Log.d("Enter Succesfull","Delete Data and finish service");
+                            db.deleteAll();
+                            stopSelf();
+                        }
+
                     }
 
                     @Override
                     public void onFailure(Call<List<Player>> call, Throwable t) {
+                        Log.d("Error", "/"+t.getMessage());
                         call.cancel();
+                        stopSelf();
                     }
                 });
 
 
 
+            }else{
+                stopSelf();
             }
         }
 
