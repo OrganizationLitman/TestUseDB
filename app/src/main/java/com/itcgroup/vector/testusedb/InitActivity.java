@@ -31,6 +31,8 @@ public class InitActivity extends AppCompatActivity {
         btnSave = (Button) findViewById(R.id.btnGuardar);
         btnShow = (Button) findViewById(R.id.btnMostrar);
         btnDelete = (Button) findViewById(R.id.btnDelete);
+		
+		//Litman modifico esta clase
 
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
