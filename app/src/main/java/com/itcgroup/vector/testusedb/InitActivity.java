@@ -33,7 +33,7 @@ public class InitActivity extends AppCompatActivity {
         btnDelete = (Button) findViewById(R.id.btnDelete);
 		
 		//Litman modifico esta clase
-
+        //Vanessa modifico
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
